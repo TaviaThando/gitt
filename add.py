@@ -8,4 +8,11 @@ def all_files():
         print("FILES ADDED...")
         print()
 
-# def selected_files():
+
+def single_file():
+    fileName = input("What is the name of the file? ")
+    system(f"git add {fileName}")
+
+
+def selected_files():
+    

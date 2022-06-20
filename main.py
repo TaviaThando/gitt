@@ -1,6 +1,6 @@
 #!/bin/env python
 from os import system, path
-from add import all_files
+from add import all_files, single_file
 
 add = input("Would you like to add all your files? (y/n): ")
 
@@ -16,10 +16,8 @@ elif add == "n" or add == "N" or add == "no" or add == "No" or add == "NO":
     print("")
 
     if numOfFiles == 1:
-
-        fileName = input("What is the name of the file? ")
-        system(f"git add {fileName}")
-
+        single_file()
+        
         commit = input("What would you like your commit message to be? ")
         system(f"git commit -m '{commit}'")
 
