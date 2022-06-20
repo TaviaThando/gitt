@@ -15,4 +15,5 @@ def single_file():
 
 
 def selected_files():
-    
+    fileName = input("What is the name of the file? ")
+    system(f"git add {fileName}")
