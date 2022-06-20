@@ -1,14 +1,11 @@
 #!/bin/env python
 from os import system, path
+from add import all_files
 
 add = input("Would you like to add all your files? (y/n): ")
 
 if add == "y" or add == "Y" or add == "yes" or add == "Yes" or add == "YES":
-
-    system("git add .")
-    print()
-    print("FILES ADDED...")
-    print()
+    all_files()
 
     commit = input("What would you like your commit message to be? ")
     system(f"git commit -m '{commit}'")
@@ -46,4 +43,5 @@ if pushOrPull == "push" or pushOrPull == "Push" or pushOrPull == "PUSH":
 
 elif pushOrPull == "pull" or pushOrPull == "Pull" or pushOrPull == "PULL":
     system("git pull")
+
 
